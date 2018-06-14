@@ -1,24 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0sP-nD-KIT"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Cu-3V-bww"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="hnG-mw-4p4">
+                                <rect key="frame" x="87" y="153" width="200" height="360"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="360" id="cBx-rD-KcC"/>
+                                    <constraint firstAttribute="width" constant="200" id="uNx-b7-prx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muK-qU-GTv">
+                                <rect key="frame" x="20" y="553" width="335" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Avl-Da-GoC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="muK-qU-GTv" firstAttribute="top" secondItem="hnG-mw-4p4" secondAttribute="bottom" constant="40" id="1bB-Hs-doC"/>
+                            <constraint firstAttribute="trailing" secondItem="muK-qU-GTv" secondAttribute="trailing" constant="20" id="Ll4-Ch-E5j"/>
+                            <constraint firstItem="muK-qU-GTv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Tmb-Xn-Nhb"/>
+                            <constraint firstItem="hnG-mw-4p4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ikY-Fe-ttJ"/>
+                            <constraint firstItem="muK-qU-GTv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jEY-eE-bZx"/>
+                            <constraint firstItem="hnG-mw-4p4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m96-BD-pi3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="muK-qU-GTv" id="Kps-Km-htA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="launchImage" width="375" height="667"/>
+    </resources>
 </document>
